@@ -17,13 +17,13 @@ def main():
 
 	he_version = "v0.01"
 
-	parser = optparse.OptionParser("Usage: hist-eraser.py -u <user> , -i for help")
-	parser.add_option('-u', "--user", dest='he_user', type='string', help='Specify user using -u')
+	parser = optparse.OptionParser("Usage: hist-eraser.py -u <user>")
+	parser.add_option('-u', '--user', dest='username', type='string', help='Specify user using -u')
 	(options, args) = parser.parse_args()
-	if options.he_user == None:
+	if options.username == None:
 		print "Specify User by using -u <username>"
 		exit(0)
-	he_user = options.he_user
+	he_user = options.username
 	print "Appointed User: "+he_user
 
 	user_files = [".bash_history"]
