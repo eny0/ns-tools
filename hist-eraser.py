@@ -7,7 +7,7 @@
 #
 # -u : Specify the user to wipe
 # -b : Use backed up files // will be implemented after Hist-Saver is complete.
-
+# -h : Show help
 
 # Could be used in conjunction with a 'History Saver' that backs up the old logs and this
 # eraser could then restore those old log files back after erasing the new ones
@@ -17,11 +17,11 @@ def main():
 
 	he_version = "v0.01"
 
-	parser = optparse.OptionParser("Usage: hist-eraser.py -u <user>")
-	parser.add_option('-u', dest='he_user', type='string', help='Specify user using -u')
+	parser = optparse.OptionParser("Usage: hist-eraser.py -u <user> , -i for help")
+	parser.add_option('-u', "--user", dest='he_user', type='string', help='Specify user using -u')
 	(options, args) = parser.parse_args()
 	if options.he_user == None:
-		print "Specify User"
+		print "Specify User by using -u <username>"
 		exit(0)
 	he_user = options.he_user
 	print "Appointed User: "+he_user
