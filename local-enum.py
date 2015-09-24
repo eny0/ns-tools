@@ -1,8 +1,4 @@
 #!/usr/bin/python
-# local-enum v0.01
-#
-#	Enumerates all important files on a device.
-
 outbuf = ""
 
 def runCmds(commands):
